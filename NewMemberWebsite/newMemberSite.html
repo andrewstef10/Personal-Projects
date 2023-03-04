@@ -6,21 +6,15 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <div id="camera"></div>
-        <button onclick="take_snapshot()">Take Picture</button>
+        <video id="camera" autoplay></video>
+        <button id="takePictureButton" onclick="take_snapshot()">Take Picture</button>
 
+        <p id="demo"></p>
+
+
+        <script src="script.js"></script>
     </body>
-    <script> src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"</script>
-    <!-- <script> src="script.js"</script> -->
-    <script>
-        // load webcam
-        Webcam.set({
-            width:350,
-            height:350,
-            image_format:'jpeg',
-            jpeg_quality:90
-        })
-        Webcam.attach("#camera")
-    </script>
 
+    
+    
 </html>
