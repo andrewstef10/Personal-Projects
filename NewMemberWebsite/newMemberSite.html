@@ -9,8 +9,25 @@
         <video id="camera" autoplay></video>
         <button id="takePictureButton" onclick="take_snapshot()">Take Picture</button>
 
-        <p id="demo"></p>
+        <p>Please take a picture, enter your information, then click the submit button</p>
+        <p id="errorMessage"></p>
 
+        <label for="userInput">First Name:</label>
+        <input type="text" id="firstName" name="firstName">
+
+        <label for="userInput">Last Name:</label>
+        <input type="text" id="lastName" name="lastName">
+
+        <label for="userInput">Age:</label>
+        <input type="text" id="age" name="age">
+
+        <label for="userInput">Class:</label>
+        <input type="text" id="class" name="class">
+
+        <button id="submitButton" onclick="submitNewMember()">Submit</button>
+
+        <button id="printArrButton" onclick="printNewMemberArr()">Print New Members</button>
+        <p id="printArr"></p>
 
         <script src="script.js"></script>
     </body>
