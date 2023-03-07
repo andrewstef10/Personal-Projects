@@ -19,7 +19,7 @@
         <input type="text" id="lastName" name="lastName">
 
         <label for="userInput">Age:</label>
-        <input type="text" id="age" name="age">
+        <input type="number" id="age" name="age">
 
         <label for="userInput">Class:</label>
         <input type="text" id="class" name="class">
@@ -29,6 +29,9 @@
         <button id="printArrButton" onclick="printNewMemberArr()">Print New Members</button>
         <p id="printArr"></p>
 
+        <div id="listOfNewMembers-container"></div>
+
+        <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
         <script src="script.js"></script>
     </body>
 

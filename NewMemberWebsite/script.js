@@ -112,7 +112,43 @@ function equalsIgnoringCase(text, other) {
 }
 
 function printNewMemberArr() {
-    document.getElementById("printArr").innerHTML = JSON.stringify(listOfNewMembers);
+    //document.getElementById("printArr").innerHTML = JSON.stringify(listOfNewMembers);
+
+    const container = document.getElementById("listOfNewMembers-container");
+    for (let i = 0; i < listOfNewMembers.length; i++) {
+        const person = listOfNewMembers[i];
+
+        // create HTML elements for the person's information
+        const div = document.createElement("div");
+        const firstName = document.createElement("h2");
+        const lastName = document.createElement("h2");
+        const age = document.createElement("p");
+        const personClass = document.createElement("p");
+        const img = document.createElement("img");
+
+        //set contents of name and age elements
+        firstName.textContent = person.firstName;
+        lastName.textContent = person.lastName;
+        age.textContent = person.age;
+        personClass.textContent = person.class;
+        img.src = person.picture;
+
+        //append elements to the container
+        div.appendChild(img);
+        div.appendChild(firstName);
+        div.appendChild(lastName);
+        div.appendChild(age);
+        div.appendChild(personClass);
+        container.appendChild(div);
+    }
+    
+    // var doc = new jsPDF();
+    // doc.setFontSize(11);
+    // doc.text("TEST DOCUMENT", 20, 20);
+    // doc.save("output.txt");
+    
+    
+
 }
 
 
